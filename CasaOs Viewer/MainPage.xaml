@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CasaOs_Viewer.MainPage"
+             Title="CasaOS">
+
+    <Grid>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center" IsVisible="true" x:Name="stack">
+
+            <Image
+                Source="casaos.png"
+                HeightRequest="200"
+                HorizontalOptions="CenterAndExpand" />
+
+            <Label
+                Text="Enter your casaOS url"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Entry Placeholder="https://casaos.com" x:Name="casaosURL" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Connect"
+                Clicked="OnConnectClick"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+        <WebView x:Name="casaOSView" 
+                     HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="FillAndExpand" 
+                     IsVisible="false" MinimumWidthRequest="100" MinimumHeightRequest="100"/>
+    </Grid>
+
+</ContentPage>
